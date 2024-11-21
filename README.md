@@ -1,2 +1,2 @@
-# paytr-integration
-PayTR payment solution integration for .NET web app.
+# PayTR Integration
+This .NET Standard library is contains PayTR payment integration.

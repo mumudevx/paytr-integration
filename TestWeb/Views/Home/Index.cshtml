@@ -1,0 +1,14 @@
+﻿@model PayTrPayment.Models.Responses.TokenResponse
+
+@{
+    ViewData["Title"] = "PayTR";
+}
+
+<p><strong>Status:</strong> @Model.Status</p>
+<p><strong>Error Message (If Exists):</strong> @Model.ErrorMessage</p>
+<p><strong>Token:</strong> @Model.Token</p>
+
+<script src="https://www.paytr.com/js/iframeResizer.min.js"></script>
+<iframe src="@($"https://www.paytr.com/odeme/guvenli/{Model.Token}")" id="paytriframe" frameborder="0"
+        scrolling="no" style="width: 100%;"></iframe>
+<script>iFrameResize({}, '#paytriframe');</script>
